@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		/*----------伪等高和方法一
+		main{
+			font-size:14px;
+			padding-left:10em;
+			overflow:hidden;
+		}
+		aside{
+			width:10em;
+			float:left;
+			margin-left:-10em;
+			background:lightblue;
+			position:relative;
+			left:-100%;
+			padding-bottom:99em;
+			margin-bottom:-99em;
+		}
+		article{
+			float:left;
+			width:100%;
+			background:green;
+			padding-bottom:99em;
+			margin-bottom:-99em;
+		}
+		*/
+		/*---------------方法二-------------------
+		main{
+			font-size:14px;
+			position:relative;
+		}
+		article{
+			background:coral;
+			margin-left:10em;
+		}
+		aside{
+			position:absolute;
+			left:0;
+			top:0;
+			bottom:0;可以实现高度100%
+			background:lightblue;
+			width:10em;
+		}
+		*/
+
+		main{
+			display:table;
+		}
+		article,aside{
+			display:table-cell;
+			padding:1em;
+		}
+		article{
+			background:coral;
+		}
+		aside{
+			background:lightblue;
+			width:10em;
+		}
+	</style>
+</head>
+<body>
+<main>
+	<article>if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you if you </article>
+
+<!--发现一个蛋疼问题，如果文章中没有空格会被认为是长单词，就不会自动换行，会挤破盒子，但是可以用word-wrap：word-break-->
+	<aside>这是一个侧边栏</aside>
+</main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box{
+			transition: all 2s ease-in-out;/*还有第三个参数代表延时*/
+			width:200px;
+			height:200px;
+			border-width:50px;
+			border-style:solid;
+			border-top-color:#f35;
+			border-left-color:#269;
+			border-right-color:#649;
+			border-bottom-color:#fa0;
+		}
+		.box:hover{
+			width:0;
+			height:0;
+		}
+		.container-3d{
+			margin-top:2em;
+			padding:1em;
+			border:1px solid #666;
+			perspective:10em;
+		}
+		p{
+			font-size:2em;
+			transform:rotateY(45deg);
+			margin:0;
+			padding:0;
+			line-height:4em;
+			width:8em;
+			text-align:center;
+			background:lightblue;
+
+		}
+		.box2{
+			margin-top:2em;
+			width:100px;
+			height:100px;
+			transition:width 1s ease 1s,height 1s ease;
+			background:lightblue;
+		}
+		.box2:hover{
+			width:200px;
+			height:200px;
+		}
+		@keyframes down{
+			from{
+				margin-top:2em;
+				opacity:1;
+			}
+			50%{
+				margin-top:10em;
+				opacity:0.3;
+			}
+			to{
+				margin-top:2em;
+				opacity:1;
+			}
+		}
+		.scroll-down{
+			background:lightblue;
+			width:100px;
+			height:100px;
+			animation:down 2s ease infinite;/*infinite代表无限循环*/
+		}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+<div class="container-3d">
+	<p>hehe hehe hehe</p>
+</div>
+<div class="box2"></div>
+<div class="scroll-down"></div>
+</body>
+</html>
