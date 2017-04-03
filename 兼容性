@@ -1,0 +1,64 @@
+1.了解浏览器支持情况：
+caniuse.com
+MDN CSS Reference
+Codrops CSS Reference
+QuirksMode.org Css
+
+2.需要兼容哪些浏览器：
+面向普通用户：IE8+,chrome,firefox
+企业级产品：IE9+,chrome,firefox
+了解浏览器市场份额：日志分析
+					百度统计，NetMarketShare
+
+3：for example
+opacity：0.5  在IE下用filter：alpha（opacity=50）
+IE6双边距问题
+例如
+.selector{
+	float:left;
+	margin-left:10px;
+	/*ie6下显示20px*/
+}
+解决方式
+.selector{
+	float:left;
+	margin-left:10px;
+	_display:inline;
+}
+
+4.可以使用js让浏览器支持
+使用html5shim.js让ie6-8支持新标签
+使用DD_belatedPNG.js让ie6支持半透明png文件
+
+5.可以使用@supports来判断是否支持某些属性，但是不是所有浏览器都兼容@supports
+
+6.浏览器hack原理-层叠
+P{display:table;display:flex}后面的会覆盖前面的，如果后面的不认识，则会忽略，使用前面的属性
+
+7.IE特有的注释来判断浏览器
+
+8.IE6不支持min-height，可以使用div{min-height:500px;_height:500px}
+也不支持min-width，可以在div中在加一个元素，把该元素的宽度设置为500，可以当做外层元素的最小值
+不支持max-height/width，要使用js来解决问题，
+不支持position:fixed 解决办法;
+html,body{
+	height:100%
+	} 
+.go-top{position:fixed;
+	_position:absolute;
+	bottom:0;
+	right:0
+}//固定在右下角
+IE6-7不支持inline-block  解决办法
+{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+}
+IE6-7不支持display:table  可也以使用float
+
+9.css3属性 IE6-7不支持，IE8支持一部分，IE9+基本支持
+
+10.media query基本媒体查询都支持，媒体特性IE9+
+
+

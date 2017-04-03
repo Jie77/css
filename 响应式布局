@@ -1,0 +1,21 @@
+响应式布局：
+
+1.head中要加上<meta name="viewport" content="width=device-width,initial-scale=1">
+
+2.响应式图片:图片随容器大小变化，宽高比不变，要设置max-width:100%
+背景图片：background-size:contain 不会裁剪
+		  background-size:cover  会裁剪，但会铺满
+
+3.保持高宽比：padding的%比例是根据容器的宽度决定的
+可以设置一个<div></div>  让其height:0,padding-top:50%
+
+4. 针对不同的屏幕采用不同的样式：media query
+<link rel="stylesheet" href="m.css" media="screen and (max-width:480px)">
+或者@media screen and (max-width:480px){}
+
+可以查询的media
+width  height  device-width  device-height(设备) device-pixel-ratio(对付高分辨率屏幕) orientation(横竖屏)
+
+5.字体设置：
+用rem做单位,相对于root元素font-size的字体大小
+例如：html{font-size:16px} p{font-size:2rem}/*32px*/
