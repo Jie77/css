@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>二级菜单</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		div{
+			margin:0 auto;
+			width:400px;
+		}
+		div .outerul{
+			display:block;
+			width:100%;
+			list-style:none;
+			background-color:lightblue;
+			height:40px;
+		}
+		div .outerul .outerli{
+			display:block;
+			position:relative;
+			width:25%;
+			float:left;
+			line-height:40px;
+			text-align:center;
+		}
+		div .outerul .outerli a{
+			text-decoration:none;
+		}
+		div .outerul .outerli .innerul{
+			display:block;
+			height:0px;
+			overflow:hidden;
+			position:absolute;
+			list-style:none;
+			top:40px;
+			width:100%;
+			transition:all 0.5s ease-in-out;
+		}
+		div .outerul .outerli:hover .innerul{
+			height:120px;
+		}
+		div .outerul .outerli .innerul .innerli{
+			display:block;
+			line-height:40px;
+			background-color:green;
+			text-align:center;
+			transition:all 0.5s ease-in-out;
+		}
+		div .outerul .outerli .innerul .innerli:hover{
+			background-color:yellow;
+		}
+		div .outerul .outerli .innerul .innerli a{
+			text-decoration:none;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul class="outerul">
+			<li class="outerli"><a href="#">web前端</a>
+				<ul class="innerul">
+					<li class="innerli">html</li>
+					<li class="innerli">css</li>
+					<li class="innerli">js</li>
+				</ul>
+			</li>
+			<li class="outerli"><a href="#">web后端</a>
+				<ul class="innerul">
+					<li class="innerli">php</li>
+					<li class="innerli">nodejs</li>
+					<li class="innerli">python</li>
+				</ul>
+			</li>
+			<li class="outerli"><a href="#">手机</a>
+				<ul class="innerul">
+					<li class="innerli">小米</li>
+					<li class="innerli">魅族</li>
+					<l class="innerli"i>华为</li>
+				</ul>
+			</li>
+			<li class="outerli"><a href="#">汽车</a>
+				<ul class="innerul">
+					<li class="innerli">奔驰</li>
+					<li class="innerli">宝马</li>
+					<l class="innerli"i>奥迪</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
